@@ -10,7 +10,7 @@ function Letter (letter) {
     this.guessed = false;
     this.guess = function() {
         if 
-        (this.letter === ""){
+        (this.letter === " "){
             return " ";
         }
         else if 
@@ -18,18 +18,20 @@ function Letter (letter) {
             return "_";
         }
         else {
-            return this.alpha;
+            return this.letter;
         }
     };
     this.check = function(userGuess) {
-        if (userGuess === this.alpha){
-            this.guessed = ture;
+        if (userGuess === this.letter){
+            this.guessed = true;
         }
 
     };
   };
 
   module.exports = Letter; 
+
+  Letter();
 
 //   * A string value to store the underlying character for the letter
 

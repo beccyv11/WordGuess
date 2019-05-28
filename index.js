@@ -3,7 +3,7 @@
 //   * Randomly selects a word and uses the `Word` constructor to store it
 
 //   * Prompts the user for each guess and keeps track of the user's remaining guesses
-var Word = require("./word.js");
+var Word = require("./Word.js");
 var inquirer = require('inquirer');
 
 
@@ -25,7 +25,7 @@ function startGame() {
     if (select > -1) {
         wordList.splice(select, 1);
     }
-    console.log("\n10 Attempts to guess the letters in this baseball players name.\n".cyan)
+    console.log("\n10 Attempts to guess the letters in this baseball players name.\n")
     promptUser();
 }
 
@@ -44,7 +44,7 @@ function promptUser() {
         });
     }
     else{
-        console.log("\nSorry, you're out of guesses.\n".inverse);
+        console.log("\nSorry, you're out of guesses.\n");
         console.log(chosenWord);
         chosenWord = "";
         gameWord = "";

@@ -2,7 +2,7 @@
 // This is used to create an object representing the current word the user is attempting to guess. 
 //That means the constructor should define:
 
-var Letter = require("./letter.js");
+var Letter = require("./Letter.js");
 
 function Word (wordArray) {
     this.wordArray = wordArray;
@@ -16,7 +16,7 @@ function Word (wordArray) {
     this.showWord = function() {
         var wordDisplay = [];
         for (var i=0; i<this.wordTest.length; i++) {
-            wordDisplay.push(this.wordTest[i].displayLet());
+            wordDisplay.push(this.wordTest[i].guess());
         }
         return wordDisplay.join(" ");
     };
